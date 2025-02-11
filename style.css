@@ -1,0 +1,386 @@
+:root {
+  --primary: #ffae00;
+  --bg: #010101;
+  --blu: #00b3ff;
+  --red: #ff0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #151414;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff0000;
+  font-style: italic;
+}
+.navbar .navbar-logo span {
+  color: var(--blu);
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: red;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extraa a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extraa a:hover {
+  color: var(--blu);
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("img/header-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: var(--bg);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: white;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px #01010380;
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: red;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* Logo Section */
+.logo .row .logo-img img {
+  width: 100%;
+  display: flex;
+}
+
+/* About Section */
+.about,
+.meenu,
+.contact,
+.logo {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.meenu h2,
+.contact h2,
+.logo h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.meenu h2 span,
+.contact h2 span,
+.logo h2 span {
+  color: #ff0000;
+}
+
+.about .row,
+.logo .row {
+  display: flex;
+}
+
+.about .row .about-img,
+.logo .row .logo-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content,
+.logo .row .logo {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3,
+.logo .row .logo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p,
+.logo .row .logo p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.videeo {
+  font-size: 3rem;
+}
+/* Menu section */
+
+.meenu p,
+.contact p,
+.logo p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.meenu h2 span {
+  color: #ff0000;
+}
+
+.meenu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.meenu .row .meenu-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.meenu .row .meenu-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.meenu .row .meenu-card-title {
+  margin-top: 1.5rem auto 1rem;
+}
+
+.meenu .row .meenu-card-price {
+  font-size: medium;
+}
+
+.videeo {
+  display: flex;
+  margin-top: 2rem;
+}
+
+/* contact section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background-color: var(--red);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: white;
+  margin: 1rem;
+}
+
+footer .socials a:hover {
+  color: var(--blu);
+}
+
+footer .links a {
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
+footer .links a:hover {
+  color: var(--blu);
+}
+
+footer .credit p {
+  font-size: 1.5rem;
+}
+
+footer .credit a {
+  color: white;
+  font-weight: 600;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 756px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .about .row,
+  .logo .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img,
+  .logo .row .logo-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content,
+  .logo .row .logo {
+    padding: 0;
+  }
+
+  .about .row .content h3,
+  .logo .row .logo h3 {
+    top: 1rem;
+    font-size: 1.6rem;
+  }
+}
